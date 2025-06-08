@@ -1,0 +1,139 @@
+/* Details
+The font for the headlines is Lora and can be found on Google fonts.
+The font list for the body copy is: Helvetica, Arial, sans-serif, and the color should be #333.
+
+You can use #d0d0d0 for the light grey color of the lines.
+Navigation links should behave thus: normal and visited: #666 and no underline , active: #DEB887, hover: #00ddff, use the same fonts as the headlines (Lora)
+
+The exception would be the title of the site. It should be a link, but should not have a hover change and should remain the same color of the rest of the text (#333)
+
+You should be able to do this without modifying the html. Have that as your goal. If you do end up changing the .html file make sure to submit it with your css! */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+// Variables
+$light-gray: #d0d0d0;
+$text-color: #333;
+$visited-color: #666;
+$active-color: #DEB887;
+$hover-color: #00ddff;
+$font-headline: 'Lora', serif;
+$font-body: Helvetica, Arial, sans-serif;
+
+// Mixin for borders
+@mixin border-top-bottom($color) {
+  border-top: 1px solid $color;
+  border-bottom: 1px solid $color;
+}
+
+// Main styles
+main {
+  font-family: $font-body;
+  color: $text-color;
+  padding-top: 5px;
+  font-weight: 600;
+
+  @media (min-width: 640px) {
+    font-size: 1rem;
+  }
+}
+
+// Headline and nav styling
+h1, h2, h3, h4, h5, h6, nav a {
+  font-family: $font-headline;
+  font-weight: 600;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+h1 a:link {
+  color: #000;
+}
+
+// Links and navigation
+a {
+  text-decoration: none;
+  text-align: center;
+  color: $visited-color;
+}
+
+nav {
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    @include border-top-bottom($light-gray);
+    
+    li {
+      padding: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    a:link,
+    a:visited {
+        color: $visited-color;
+    }
+
+    a:active {
+        color: $active-color;
+    }
+
+    a:hover {
+        color: $hover-color;
+    }
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+      justify-content: flex-end;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+// Post date and content styling
+h2.post-date {
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: right;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $light-gray;
+
+  @media (min-width: 640px) {
+    border: none;
+  }
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Article layout styling
+article {
+  display: flex;
+  flex-wrap: wrap;
+
+  .post-date {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .post-content {
+    flex: 2;
+    padding-left: 10px;
+    border-left: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+
+  

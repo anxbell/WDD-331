@@ -1,0 +1,112 @@
+/* Details
+The font for the headlines is Lora and can be found on Google fonts.
+The font list for the body copy is: Helvetica, Arial, sans-serif, and the color should be #333.
+
+You can use #d0d0d0 for the light grey color of the lines.
+Navigation links should behave thus: normal and visited: #666 and no underline , active: #DEB887, hover: #00ddff, use the same fonts as the headlines (Lora)
+
+The exception would be the title of the site. It should be a link, but should not have a hover change and should remain the same color of the rest of the text (#333)
+
+You should be able to do this without modifying the html. Have that as your goal. If you do end up changing the .html file make sure to submit it with your css! */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+main {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #333;
+  padding-top: 5px;
+  font-weight: 600;
+}
+@media (min-width: 640px) {
+  main {
+    font-size: 1rem;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, nav a {
+  font-family: "Lora", serif;
+  font-weight: 600;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+h1 a:link {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+  color: #666;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  border-top: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+}
+nav ul li {
+  padding: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+nav ul a:link,
+nav ul a:visited {
+  color: #666;
+}
+nav ul a:active {
+  color: #DEB887;
+}
+nav ul a:hover {
+  color: #00ddff;
+}
+@media (min-width: 640px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 1.2rem;
+  }
+}
+
+h2.post-date {
+  color: black;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: right;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d0d0d0;
+}
+@media (min-width: 640px) {
+  h2.post-date {
+    border: none;
+  }
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+}
+article .post-date {
+  flex: 1;
+  margin-right: 10px;
+}
+article .post-content {
+  flex: 2;
+  padding-left: 10px;
+  border-left: 1px solid #d0d0d0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+/*# sourceMappingURL=main.css.map */
