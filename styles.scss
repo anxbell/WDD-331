@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa;
+  padding: 1rem;
+}
+
+.cart {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 350px;
+
+  &__header {
+    display: flex;
+    color: #6c757d;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  &__count {
+    background: #6c757d;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 0.1rem 0.8rem;
+    border-radius: 50px;
+  }
+
+  &__items {
+    background-color: white;
+    list-style: none;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__item {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-bottom: none;
+
+    &--promo {
+      background-color: #f8f9fa;
+      color: #28a745;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid #dee2e6;
+    }
+  }
+
+  &__item-info {
+    max-width: 180px;
+  }
+
+  &__item-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__item-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+
+  &__item-price {
+    white-space: nowrap;
+    font-weight: bold;
+    color: #6c757d ;
+
+    &--discount {
+      color: #28a745;
+    }
+  }
+
+  &__promo-label {
+      font-size: 1.2rem;
+      font-weight: 600;
+  }
+
+  &__promo-code {
+    font-size: 0.9rem;
+  }
+
+  &__total {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &__form {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    background-color: white;
+    display: flex;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+  }
+
+  &__input {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    min-width: 0;
+    font-weight: 600;
+  }
+
+  &__button {
+    padding: 0.7rem 1rem;
+    font-weight: 600;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+}

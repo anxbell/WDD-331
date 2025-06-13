@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="cart-page">
+    <section class="cart" aria-labelledby="cart-title">
+      <div class="cart__header">
+        <h2 id="cart-title" class="cart__title">Your cart</h2>
+        <span class="cart__count">3</span>
+      </div>
+
+      <ul class="cart__items">
+        <li class="cart__item">
+          <div class="cart__item-info">
+            <div class="cart__item-name">Product name</div>
+            <div class="cart__item-description">Brief description</div>
+          </div>
+          <div class="cart__item-price">$12</div>
+        </li>
+
+        <li class="cart__item">
+          <div class="cart__item-info">
+            <div class="cart__item-name">Second product</div>
+            <div class="cart__item-description">Brief description</div>
+          </div>
+          <div class="cart__item-price">$8</div>
+        </li>
+
+        <li class="cart__item">
+          <div class="cart__item-info">
+            <div class="cart__item-name">Third item</div>
+            <div class="cart__item-description">Brief description</div>
+          </div>
+          <div class="cart__item-price">$5</div>
+        </li>
+
+        <li class="cart__item cart__item--promo">
+          <div class="cart__promo-info">
+            <div class="cart__promo-label">Promo code</div>
+            <div class="cart__promo-code">EXAMPLECODE</div>
+          </div>
+          <div class="cart__item-price cart__item-price--discount">-$5</div>
+        </li>
+      </ul>
+
+      <div class="cart__total">
+        <div class="cart__total-label">Total (USD)</div>
+        <div class="cart__total-price">$20</div>
+      </div>
+
+      <form class="cart__form">
+        <input type="text" class="cart__input" placeholder="Promo code" />
+        <button type="submit" class="cart__button">Redeem</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
