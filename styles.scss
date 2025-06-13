@@ -6,6 +6,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: #f8f9fa;
   padding: 1rem;
+  color: #212529;;
 }
 
 .cart {
@@ -74,7 +75,7 @@ body {
   }
 
   &__item-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
   }
 
@@ -94,12 +95,12 @@ body {
   }
 
   &__promo-label {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 600;
   }
 
   &__promo-code {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   &__total {
