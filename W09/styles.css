@@ -33,13 +33,35 @@ code {
     border-radius: 4px;
 }
 
-.alert h2 {
-    border-right: 2px solid #d9534f;
-    padding-right: 1rem;
-    margin-top: 0;
-    color: #d9534f;
-    font-size: 1.2rem;
+.title h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  font-weight: 600;
+  transform: scaleY(1.15);
 }
+
+.alert h2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: #d9534f;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 2.8rem 3rem;
+  font-family: 'Recursive', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 50%;
+  border: 2px dashed white;
+  box-sizing: border-box;
+}
+
+
 
 .alert p {
     padding-left: 1rem;
